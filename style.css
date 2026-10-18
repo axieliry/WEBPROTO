@@ -1191,3 +1191,269 @@ button {
         transition-duration: .01ms !important;
     }
 }
+
+
+/* BOOMSTICK REVISION: simpler, bolder layout */
+:root {
+    --red: #b83224;
+    --red-dark: #922719;
+    --cream: #fffdf8;
+    --cream-dark: #f3e7d8;
+    --text: #27211e;
+    --muted: #655b54;
+    --border: #dfd2c4;
+    --shadow: 0 8px 22px rgba(39, 24, 16, .08);
+}
+
+body { background: var(--cream); }
+.header { min-height: 70px; box-shadow: 0 2px 8px rgba(30, 20, 15, .04); }
+.logo { letter-spacing: -.6px; }
+.hero { background: #f1e2d1; }
+.hero h1 { letter-spacing: -1.5px; }
+.hero-image, .about-image { border-radius: 5px; background: #e6d1ba; }
+.photo-caption { border-radius: 3px; }
+.btn { border-radius: 4px; }
+.benefits { background: #30231f; }
+.benefit > span { color: #f0b58e; }
+.section-heading h2, .product-content h2, .order-intro h2 { letter-spacing: -.7px; }
+.fact, .testing-panel, .order-form { border-radius: 5px; box-shadow: none; }
+.fact { border-left: 3px solid var(--red); }
+.testing-panel { border-radius: 5px; }
+.feedback-item, .result-placeholder, .order-note { border-radius: 4px; }
+.order-form { box-shadow: 0 6px 18px rgba(39, 24, 16, .06); }
+.form-group input, .form-group textarea, .form-group select { border-radius: 4px; }
+
+/* Process graph: the four process photos branch out from the product in the middle. */
+.process-graph {
+    height: 650px;
+    max-width: 1000px;
+    background: #f7efe5;
+    border: 1px solid #e4d3c1;
+    border-radius: 5px;
+}
+.process-lines { z-index: 1; }
+.branch-line {
+    stroke: #b83224;
+    stroke-width: 5;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+.process-step {
+    width: 210px;
+    min-height: 0;
+    padding: 10px;
+    border: 2px solid #e5d3c1;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(50, 30, 20, .07);
+}
+.step-one { left: 7%; top: 5%; }
+.step-two { right: 7%; top: 5%; }
+.step-three { left: 7%; bottom: 5%; }
+.step-four { right: 7%; bottom: 5%; }
+.step-picture {
+    height: 112px;
+    border-radius: 3px;
+    background: #ead9c7;
+}
+.step-fallback, .center-fallback { color: #9c4934; }
+.process-center {
+    width: 190px;
+    height: 190px;
+    padding: 12px;
+    border: 4px solid #b83224;
+    background: #fffdf8;
+    box-shadow: 0 0 0 9px rgba(184, 50, 36, .09);
+}
+.center-picture { width: 105px; height: 105px; }
+.process-center strong { font-size: .85rem; }
+.process-center small { font-size: .72rem; }
+.process-instructions { max-width: 720px; }
+.testing-footnote { font-weight: 700; }
+.image-placeholder { position: relative; z-index: 1; }
+.hero-image > img:not(.image-missing), .about-image > img:not(.image-missing) { z-index: 2; }
+img.image-missing { display: none !important; }
+
+@media (max-width: 850px) {
+    .process-graph { height: 600px; }
+    .process-step { width: 180px; }
+    .step-picture { height: 95px; }
+    .process-center { width: 155px; height: 155px; }
+    .center-picture { width: 78px; height: 78px; }
+}
+@media (max-width: 540px) {
+    .process-graph { height: 690px; }
+    .process-step { width: 43%; padding: 8px; }
+    .step-picture { height: 80px; }
+    .process-center { width: 122px; height: 122px; }
+    .center-picture { width: 58px; height: 58px; }
+    .process-center strong { font-size: .65rem; }
+    .process-center small { font-size: .6rem; }
+    .branch-line { stroke-width: 3; }
+}
+
+
+/* ========================================
+   ORDER CONFIRMATION POPUP
+======================================== */
+
+.confirmation-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 600;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(35, 27, 22, 0.75);
+    overflow-y: auto;
+}
+
+.confirmation-modal.is-open {
+    display: flex;
+    animation: confirmationFadeIn 0.2s ease-out;
+}
+
+.confirmation-panel {
+    width: min(440px, 100%);
+    margin: auto;
+    padding: 35px 28px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--green);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: confirmationSlideUp 0.3s ease-out;
+}
+
+.confirmation-icon {
+    width: 76px;
+    height: 76px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #e6f0df;
+    border: 2px solid #c6dbb9;
+    color: var(--green);
+    font-size: 2.6rem;
+    font-weight: 900;
+}
+
+.confirmation-panel .eyebrow {
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+}
+
+.confirmation-panel h2 {
+    margin-bottom: 14px;
+    font-size: clamp(1.7rem, 5vw, 2.2rem);
+    line-height: 1.2;
+    color: var(--text);
+}
+
+.confirmation-panel > p:not(.eyebrow) {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.confirmation-panel .confirmation-note {
+    padding: 11px;
+    background: var(--cream-dark);
+    border-radius: 4px;
+    font-size: 0.78rem !important;
+}
+
+#finishOrder {
+    width: 100%;
+    margin-top: 5px;
+    border: none;
+}
+
+#confirmOrder {
+    flex: 1 1 180px;
+    border: none;
+}
+
+#editOrder {
+    flex: 1 1 120px;
+}
+
+.summary-actions {
+    align-items: stretch;
+}
+
+.summary-actions .btn {
+    min-width: 0;
+}
+
+/* POPUP ANIMATIONS */
+
+@keyframes confirmationFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes confirmationSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* KEYBOARD FOCUS */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--red);
+    outline-offset: 3px;
+}
+
+/* MOBILE CONFIRMATION POPUP */
+
+@media (max-width: 540px) {
+    .confirmation-modal {
+        padding: 14px;
+    }
+
+    .confirmation-panel {
+        padding: 28px 20px;
+    }
+
+    .confirmation-icon {
+        width: 66px;
+        height: 66px;
+        font-size: 2.2rem;
+    }
+
+    .summary-actions {
+        flex-direction: column;
+    }
+
+    .summary-actions .btn {
+        width: 100%;
+    }
+}
+
+/* REDUCE ANIMATION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .confirmation-modal.is-open,
+    .confirmation-panel {
+        animation: none;
+    }
+}
