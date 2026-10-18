@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffaf2">
+    <title>Boomstick | A Spicy Bite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="#home" class="logo">BOOM<span>STICK</span></a>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#product">Our Product</a>
+        <a href="#testing">Product Testing</a>
+        <a href="#order" class="nav-order">Order Now</a>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">A DIFFERENT KIND OF SNACK</p>
+            <h1>Small Bite.<br><span>Big Kick.</span></h1>
+            <p class="hero-description">
+                Meet Boomstick, a tasty snack made for people who enjoy
+                something different with a little spice.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#order" class="btn btn-red">Order Now</a>
+                <a href="#about" class="btn btn-light">Learn More</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/boomstick.jpg" alt="Boomstick product">
+            <div class="image-placeholder">
+                <span>🌶️</span>
+                <p>Your Boomstick photo goes here</p>
+                <small>images/boomstick.jpg</small>
+            </div>
+            <span class="photo-caption">A spicy twist on a familiar snack</span>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="benefits">
+        <div class="benefit">
+            <span>01</span>
+            <div>
+                <strong>A Crispy Bite</strong>
+                <p>A satisfying snack experience</p>
+            </div>
+        </div>
+        <div class="benefit">
+            <span>02</span>
+            <div>
+                <strong>Savory Flavor</strong>
+                <p>A flavorful snack to enjoy</p>
+            </div>
+        </div>
+        <div class="benefit">
+            <span>03</span>
+            <div>
+                <strong>A Spicy Twist</strong>
+                <p>For those who enjoy a little heat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+        <div class="section-heading">
+            <p class="eyebrow">GET TO KNOW US</p>
+            <h2>What is <span>Boomstick?</span></h2>
+            <p>A familiar snack concept with a spicy twist.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="images/boomstick-product.jpg"
+                     alt="A closer look at Boomstick">
+                <div class="image-placeholder">
+                    <span>🍽️</span>
+                    <p>Your product photo goes here</p>
+                    <small>images/boomstick-product.jpg</small>
+                </div>
+            </div>
+
+            <div class="about-copy">
+                <h3>A snack with its own character.</h3>
+                <p>
+                    Boomstick is inspired by lumpia, combining a savory
+                    filling with chili, wrapped and cooked to create a
+                    snack with a spicy twist.
+                </p>
+                <p>
+                    Our product offers a different way to enjoy familiar
+                    snack flavors. It is made for people looking for
+                    something flavorful to enjoy during snack time.
+                </p>
+                <a href="#product" class="text-link">Discover our product →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT -->
+    <section class="section product-section" id="product">
+        <div class="product-content">
+            <p class="eyebrow">OUR FEATURED PRODUCT</p>
+            <h2>Meet the <span>Boomstick</span></h2>
+            <p>
+                Looking for a snack that's a little different? Boomstick
+                combines familiar snack elements with a spicy twist.
+                Check out how the product is prepared and learn more
+                about the work behind it.
+            </p>
+            <div class="product-buttons">
+                <a href="#order" class="btn btn-red">Get Yours</a>
+                <button type="button" class="btn btn-light process-open">
+                    See How It's Made
+                </button>
+            </div>
+        </div>
+
+        <div class="product-facts">
+            <div class="fact">
+                <span class="fact-icon">🌶️</span>
+                <div>
+                    <h3>Spicy Twist</h3>
+                    <p>Chili adds a distinctive element to the snack.</p>
+                </div>
+            </div>
+            <div class="fact">
+                <span class="fact-icon">🥟</span>
+                <div>
+                    <h3>Familiar Inspiration</h3>
+                    <p>Inspired by the familiar idea of lumpia.</p>
+                </div>
+            </div>
+            <div class="fact">
+                <span class="fact-icon">👨‍🍳</span>
+                <div>
+                    <h3>Made with Care</h3>
+                    <p>Each preparation step helps bring the product together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS PREVIEW -->
+    <section class="section process-preview">
+        <div class="section-heading">
+            <p class="eyebrow">FROM PREPARATION TO SERVING</p>
+            <h2>Behind the Boomstick</h2>
+            <p>
+                Explore the product preparation process through a
+                visual graph centered around Boomstick.
+            </p>
+        </div>
+
+        <button type="button" class="btn btn-red process-open">
+            View Process Graph
+        </button>
+    </section>
+
+    <!-- PRODUCT TESTING -->
+    <section class="section testing-section" id="testing">
+        <div class="section-heading">
+            <p class="eyebrow">PRODUCT DEVELOPMENT</p>
+            <h2>Product Testing</h2>
+            <p>
+                Product testing helps us understand how people respond
+                to Boomstick, what feedback they share, and what our
+                group can learn from the experience.
+            </p>
+        </div>
+
+        <div class="testing-content">
+            <article class="testing-panel">
+                <div class="testing-icon">🧪</div>
+                <div>
+                    <p class="testing-label">01 / THE ACTIVITY</p>
+                    <h3>What Happened During Testing?</h3>
+                    <p>
+                        During product testing, the testers were given
+                        the opportunity to try Boomstick and share their
+                        opinions about the product.
+                    </p>
+                    <p>
+                        The activity was intended to gather feedback on
+                        the snack and help the group identify which
+                        aspects might need improvement.
+                    </p>
+                    <div class="result-placeholder">
+                        <strong>Add your actual testing details</strong>
+                        <p>
+                            Include when the testing happened, how many
+                            people participated, how the product was
+                            presented, and what the testers did.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testing-panel">
+                <div class="testing-icon">💬</div>
+                <div>
+                    <p class="testing-label">02 / TESTER FEEDBACK</p>
+                    <h3>What Did the Testers Say?</h3>
+                    <p>
+                        Feedback from the testers helps the group
+                        understand their experience with Boomstick.
+                        Add the actual comments and observations collected
+                        during the testing activity below.
+                    </p>
+
+                    <div class="feedback-grid">
+                        <div class="feedback-item">
+                            <span>01</span>
+                            <h4>Taste</h4>
+                            <p>[Add actual feedback about the flavor.]</p>
+                        </div>
+                        <div class="feedback-item">
+                            <span>02</span>
+                            <h4>Texture</h4>
+                            <p>[Add actual feedback about the texture.]</p>
+                        </div>
+                        <div class="feedback-item">
+                            <span>03</span>
+                            <h4>Spiciness</h4>
+                            <p>[Add actual feedback about the spice.]</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testing-panel">
+                <div class="testing-icon">📝</div>
+                <div>
+                    <p class="testing-label">03 / OBSERVATIONS</p>
+                    <h3>What Did We Observe?</h3>
+                    <p>
+                        Describe what the group noticed during testing,
+                        such as common reactions, repeated comments,
+                        or difficulties encountered.
+                    </p>
+                    <div class="result-placeholder">
+                        <strong>Testing observations</strong>
+                        <p>
+                            [Replace this with what your group actually
+                            observed during the activity.]
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testing-panel">
+                <div class="testing-icon">💡</div>
+                <div>
+                    <p class="testing-label">04 / WHAT HAPPENED NEXT</p>
+                    <h3>Improvements and Lessons Learned</h3>
+                    <p>
+                        Explain how the feedback affected your group's
+                        decisions. If changes were made, describe what
+                        changed and why. If no changes were made, explain
+                        what the group learned instead.
+                    </p>
+                    <div class="result-placeholder">
+                        <strong>Actions taken after testing</strong>
+                        <p>
+                            [Add the actual changes or decisions made
+                            by your group after reviewing the feedback.]
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <p class="testing-footnote">
+            Replace these placeholders with your group's actual
+            testing details and feedback before publishing.
+        </p>
+    </section>
+
+    <!-- ORDER -->
+    <section class="section order-section" id="order">
+        <div class="order-intro">
+            <p class="eyebrow">READY TO ORDER?</p>
+            <h2>Get Your <span>Boomstick</span></h2>
+            <p>
+                Fill in the form with your contact details, delivery
+                address, and order information.
+            </p>
+
+            <div class="order-note">
+                <span>📍</span>
+                <p>
+                    For delivery orders, provide a complete address.
+                    Pickup orders do not require a delivery address.
+                </p>
+            </div>
+        </div>
+
+        <form id="orderForm" class="order-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input id="name" name="name" type="text"
+                           autocomplete="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactInfo">Contact Number *</label>
+                    <input id="contactInfo" name="contactInfo" type="tel"
+                           autocomplete="tel"
+                           placeholder="Enter your contact number" required>
+                </div>
+            </div>
+
+            <div class="form-group" id="addressGroup">
+                <label for="address">Complete Delivery Address *</label>
+                <textarea id="address" name="address" rows="3"
+                          autocomplete="street-address"
+                          placeholder="House number, street, barangay, municipality/city"
+                          required></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="quantity">Quantity *</label>
+                    <input id="quantity" name="quantity" type="number"
+                           min="1" max="999" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="orderType">Order Type *</label>
+                    <select id="orderType" name="orderType" required>
+                        <option value="Delivery">Delivery</option>
+                        <option value="Pickup">Pickup</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="3"
+                          placeholder="Optional order instructions"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-red submit-btn">
+                Prepare My Order
+            </button>
+            <p id="formFeedback" class="form-feedback" role="status"></p>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="#home" class="logo">BOOM<span>STICK</span></a>
+    <p>A little snack with a little kick.</p>
+    <p class="copyright">© <span id="year"></span> Boomstick. All rights reserved.</p>
+</footer>
+
+<!-- PROCESS GRAPH MODAL -->
+<div class="process-modal" id="processModal" aria-hidden="true">
+    <div class="process-modal-panel" role="dialog" aria-modal="true"
+         aria-labelledby="processTitle">
+
+        <div class="process-modal-header">
+            <div>
+                <p class="eyebrow">HOW IT COMES TOGETHER</p>
+                <h2 id="processTitle">The Boomstick Process</h2>
+            </div>
+            <button type="button" class="modal-close" id="closeProcess"
+                    aria-label="Close process graph">&times;</button>
+        </div>
+
+        <p class="process-instructions">
+            The product is in the center. Follow the animated branches
+            outward to explore each step.
+        </p>
+
+        <div class="process-graph">
+            <svg class="process-lines" viewBox="0 0 1000 700"
+                 preserveAspectRatio="none" aria-hidden="true">
+                <path class="branch-line" d="M500 350 C430 300 340 205 235 155"/>
+                <path class="branch-line" d="M500 350 C570 300 660 205 765 155"/>
+                <path class="branch-line" d="M500 350 C430 400 340 495 235 545"/>
+                <path class="branch-line" d="M500 350 C570 400 660 495 765 545"/>
+            </svg>
+
+            <article class="process-step step-one">
+                <div class="step-picture">
+                    <img src="images/process-1.jpg" alt="Ingredient preparation">
+                    <span class="step-fallback">🥣</span>
+                </div>
+                <span class="step-number">STEP 1</span>
+                <h3>Preparation</h3>
+                <p>Prepare the ingredients.</p>
+            </article>
+
+            <article class="process-step step-two">
+                <div class="step-picture">
+                    <img src="images/process-2.jpg" alt="Preparing the product">
+                    <span class="step-fallback">🌶️</span>
+                </div>
+                <span class="step-number">STEP 2</span>
+                <h3>Assembly</h3>
+                <p>Put the ingredients together.</p>
+            </article>
+
+            <article class="process-step step-three">
+                <div class="step-picture">
+                    <img src="images/process-3.jpg" alt="Cooking Boomstick">
+                    <span class="step-fallback">🍳</span>
+                </div>
+                <span class="step-number">STEP 3</span>
+                <h3>Cooking</h3>
+                <p>Cook the prepared product.</p>
+            </article>
+
+            <article class="process-step step-four">
+                <div class="step-picture">
+                    <img src="images/process-4.jpg" alt="Serving Boomstick">
+                    <span class="step-fallback">🍽️</span>
+                </div>
+                <span class="step-number">STEP 4</span>
+                <h3>Serving</h3>
+                <p>Prepare the finished product.</p>
+            </article>
+
+            <div class="process-center">
+                <div class="center-picture">
+                    <img src="images/boomstick.jpg" alt="Boomstick product">
+                    <span class="center-fallback">🌶️</span>
+                </div>
+                <strong>BOOMSTICK</strong>
+                <small>Our Product</small>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ORDER SUMMARY MODAL -->
+<div class="summary-modal" id="summaryModal" aria-hidden="true">
+    <div class="summary-panel" role="dialog" aria-modal="true"
+         aria-labelledby="summaryTitle">
+
+        <button type="button" class="modal-close summary-close"
+                id="closeSummary" aria-label="Close order summary">&times;</button>
+
+        <p class="eyebrow">ORDER DETAILS</p>
+        <h2 id="summaryTitle">Your Order Summary</h2>
+        <p class="summary-warning">
+            Review your details below. This demo prepares an order message
+            but does not send it to a seller.
+        </p>
+
+        <pre id="orderSummary"></pre>
+
+        <div class="summary-actions">
+            <button type="button" class="btn btn-red" id="copyOrder">
+                Copy Order Details
+            </button>
+            <button type="button" class="btn btn-light" id="editOrder">
+                Edit Order
+            </button>
+        </div>
+        <p id="copyFeedback" class="form-feedback" role="status"></p>
+    </div>
+</div>
+
+</body>
+</html>
